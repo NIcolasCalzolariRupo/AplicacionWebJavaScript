@@ -1,0 +1,8 @@
+{
+  "products": [
+    {"id":1,"title":"Remera Azul","desc":"Algodón 100% - Talles S a XL","price":2500,"img":"assets/remera1.jpg"},
+    {"id":2,"title":"Jean Regular","desc":"Denim clásico","price":7200,"img":"assets/jean1.jpg"},
+    {"id":3,"title":"Zapatillas Urbanas","desc":"Suela liviana","price":9800,"img":"assets/zapa1.jpg"},
+    {"id":4,"title":"Campera Impermeable","desc":"Para lluvia ligera","price":13500,"img":"assets/campera1.jpg"}
+  ]
+}
