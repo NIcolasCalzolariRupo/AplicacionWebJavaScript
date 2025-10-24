@@ -1,1 +1,57 @@
-hola mundo 
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ProyectoFinal+Apellido — Simulador E-commerce</title>
+
+  <!-- SweetAlert2 (reemplaza alert/prompt/confirm) -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Tienda Simulada — Proyecto Final</h1>
+    <div id="cart-count">Carrito: 0</div>
+  </header>
+
+  <main class="container">
+    <section id="product-list" class="product-grid">
+      <!-- Productos rendereados por JS -->
+    </section>
+
+    <aside class="sidebar">
+      <h2>Carrito</h2>
+      <div id="cart-items"></div>
+      <div id="cart-summary"></div>
+      <button id="btn-checkout">Ir a pagar</button>
+      <button id="btn-clear">Vaciar carrito</button>
+    </aside>
+  </main>
+
+  <!-- Modal / formulario checkout (simple) -->
+  <div id="checkout-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Checkout</h3>
+      <form id="checkout-form">
+        <label>Nombre
+          <input type="text" id="customer-name" name="name" required />
+        </label>
+        <label>Email
+          <input type="email" id="customer-email" name="email" required />
+        </label>
+        <label>Dirección
+          <input type="text" id="customer-address" name="address" required />
+        </label>
+        <div class="form-actions">
+          <button type="submit">Finalizar compra</button>
+          <button type="button" id="btn-cancel">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
