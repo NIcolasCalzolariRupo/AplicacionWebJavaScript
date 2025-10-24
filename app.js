@@ -1,5 +1,5 @@
 // app.js — lógica principal del simulador
-// Evitar console.log antes de entrega (recomendado: comentar o eliminar)
+
 
 const DATA_PATH = './js/data.json'; // si subes a GitHub Pages revisa ruta
 const IVA_RATE = 0.21;
@@ -12,7 +12,7 @@ let cart = loadCartFromStorage(); // array {id, qty}
 function $(sel){ return document.querySelector(sel); }
 function $all(sel){ return Array.from(document.querySelectorAll(sel)); }
 
-// Cargar datos (simula endpoint remoto)
+
 async function loadProducts(){
   try{
     const res = await fetch(DATA_PATH);
@@ -22,7 +22,7 @@ async function loadProducts(){
     renderProducts();
     renderCart();
   } catch(e){
-    // Uso de SweetAlert2 en lugar de alert
+    
     Swal.fire({ icon:'error', title:'No se pudieron cargar los productos', text:e.message });
   }
 }
@@ -46,12 +46,12 @@ function renderProducts(){
     list.appendChild(card);
   });
 
-  // handlers
+ 
   $all('.btn-add').forEach(btn => {
     btn.addEventListener('click', (e)=>{
       const id = Number(e.currentTarget.dataset.id);
       addToCart(id);
-      // feedback visual con SweetAlert2 toast
+     
       Swal.fire({ toast:true, position:'top-end', icon:'success', title:'Producto agregado', showConfirmButton:false, timer:1000 });
     });
   });
@@ -116,7 +116,7 @@ function renderCart(){
       itemsEl.appendChild(row);
     });
 
-    // qty handlers
+
     $all('#cart-items input[type="number"]').forEach(inp=>{
       inp.addEventListener('change', e=>{
         const id = Number(e.currentTarget.dataset.id);
@@ -253,3 +253,4 @@ document.addEventListener('DOMContentLoaded', ()=> {
     finalizePurchase(formData);
   });
 });
+
